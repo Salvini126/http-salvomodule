@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -11,8 +12,8 @@ export class FooComponent implements OnInit {
   loading: boolean = undefined!;
   o :Observable<Object> = undefined!;
 
-  constructor() { }
-
+  constructor(public http: HttpClient) { }
+  
   ngOnInit(): void {
   }
 
